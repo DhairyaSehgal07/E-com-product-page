@@ -27,7 +27,7 @@ const Navbar = ({cartItems}) => {
     <>
      {isMobileMenuOpen && <div className="overlay"></div> }
     <nav className="">
-      <div className="lg:mx-[10rem] lg:pt-4 lg:pb-6 px-2 sm:px-6 border-b border-gray-300 ">
+      <div className="lg:pt-4 lg:pb-6 px-2 sm:px-6 border-b border-gray-300 ">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
@@ -84,9 +84,26 @@ const Navbar = ({cartItems}) => {
   </div>
  {showCartDetails ? (
  <>
-{window.innerWidth<=640 ? (
+{window.innerWidth<=640 ? ( 
 <>
-
+<div className='absolute top-[70px] left-[-270px] w-[356px]  h-auto origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none '>
+<h2 className='p-4'>Cart</h2>
+       <hr></hr>
+    {cartItems.length===0 ? (
+    <>
+      <div className='h-[150px] flex justify-center items-center'>Your cart is empty</div>
+    </>) : 
+    (<>
+    <div className='flex flex-col'>
+      <div className='flex'>
+        <div className='p-2'>Image</div>
+        <div className='p-2'>content</div>
+        <div className='p-2'>delete</div>
+      </div>
+      <button className='bg-orange-500 text-white py-4 m-2 rounded-lg'>Checkout</button>
+    </div>
+    </>)}
+</div>
 </>) : (
 <>
 <div className="absolute right-0 z-10 mt-2 w-[350px] h-auto origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ">
@@ -94,7 +111,7 @@ const Navbar = ({cartItems}) => {
        <hr></hr>
     {cartItems.length===0 ? (
     <>
-      <div className='absolute top-[80px] left-[82px]'>Your cart is empty</div>
+      <div className='h-[150px] flex justify-center items-center'>Your cart is empty</div>
     </>) : 
     (<>
     <div className='flex flex-col'>
