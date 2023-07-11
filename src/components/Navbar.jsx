@@ -64,7 +64,7 @@ const Navbar = () => {
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               type="button"
-              className=" p-1 text-gray-400 lg:mr-4"
+              className=" p-1 text-gray-400 lg:mr-4 focus:ring rounded-full "
               onClick={()=> setShowCartDetails(!showCartDetails)}
             >
               <span className="sr-only">View notifications</span>
@@ -72,11 +72,12 @@ const Navbar = () => {
              </button>
 
             {/* Profile dropdown */}
-        <div onClick={()=> setShowCartDetails(!showCartDetails)} className="relative ml-3 cursor-pointer">
-  <div className="flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-orange-500">
-    <span className="sr-only">Open user menu</span>
+        <div onClick={()=> setShowCartDetails(!showCartDetails)}  className="ml-3 cursor-pointer">
+  <div className="relative ml-3 cursor-pointer" 
+>
+    <span className="sr-only ">Open user menu</span>
     <img
-      className="lg:h-12 lg:w-12 h-8 w-8 rounded-full "
+      className="lg:h-12 lg:w-12 h-8 w-8 rounded-full hover:ring-2 hover: ring-orange-500 focus:ring-2 focus:ring-orange-500"
       src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
       alt=""
     />
