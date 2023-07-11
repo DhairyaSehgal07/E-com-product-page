@@ -16,6 +16,22 @@
     justify-content: center;
 
   }
+
+  .thumbnail-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .thumbnail {
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .selected {
+    border: 2px solid red; /* Example styling for selected thumbnail */
+  }
+  
   
   .overlay-hidden {
     display: none;
