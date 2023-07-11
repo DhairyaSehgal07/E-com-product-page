@@ -14,7 +14,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-const Navbar = () => {
+const Navbar = ({cartItems}) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showCartDetails ,setShowCartDetails]=useState(false); 
   
@@ -84,9 +84,30 @@ const Navbar = () => {
   </div>
  {showCartDetails ? (
  <>
-  <div className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ">
-       Show cart
+{window.innerWidth<=640 ? (
+<>
+
+</>) : (
+<>
+<div className="absolute right-0 z-10 mt-2 w-[350px] h-auto origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ">
+       <h2 className='p-4'>Cart</h2>
+       <hr></hr>
+    {cartItems.length===0 ? (
+    <>
+      <div className='absolute top-[80px] left-[82px]'>Your cart is empty</div>
+    </>) : 
+    (<>
+    <div className='flex flex-col'>
+      <div className='flex'>
+        <div className='p-2'>Image</div>
+        <div className='p-2'>content</div>
+        <div className='p-2'>delete</div>
+      </div>
+      <button className='bg-orange-500 text-white py-4 m-2 rounded-lg'>Checkout</button>
+    </div>
+    </>)}
   </div>
+</>)}
  </>): (<></>)}
 </div>
 

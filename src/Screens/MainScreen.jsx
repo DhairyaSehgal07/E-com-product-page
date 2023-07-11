@@ -1,11 +1,15 @@
-import Navbar from "../components/Navbar"
+import React from 'react';
+import Navbar from '../components/Navbar';
 
 const MainScreen = () => {
-  return (
-      <>
-      <Navbar/>
-      </>
-  )
-}
+  const cartItems = ["kaanchu"]; // Your cart items array
 
-export default MainScreen
+  return (
+    <>
+      <Navbar cartItems={cartItems} />
+    
+    </>
+  );
+};
+
+export default MainScreen;
