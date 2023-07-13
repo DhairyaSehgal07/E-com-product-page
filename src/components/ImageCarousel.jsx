@@ -35,11 +35,13 @@ const ImageCarousel = () => {
 
   return (
     <div
-      className="carousel-container"
+      className="carousel-container "
       tabIndex={0} // Add tabIndex to make the component focusable and listen to keyboard events
       onKeyDown={handleKeyDown}
     >
+     
       <motion.img
+      className='lg:h-[600px] lg:w-[600px]'
         key={currentImageIndex}
         src={images[currentImageIndex]}
         alt="carousel"
@@ -49,8 +51,10 @@ const ImageCarousel = () => {
         transition={{ duration: 0.5 }}
       />
 
-      <button className='bg-white text-black  text-[1.5rem] absolute   left-[1rem] top-[14rem] rounded-full h-12 w-12' onClick={handlePrevImage}>  &#60; </button>
-      <button className='bg-white text-black text-[1.5rem] absolute top-[14rem] left-[20.3rem] rounded-full h-12 w-12' onClick={handleNextImage}> &#62;</button>
+      <div className='flex justify-between mx-2 relative bottom-[14rem]'>
+      <button className='bg-white text-black  text-[1.2rem]   rounded-full h-8 w-8' onClick={handlePrevImage}>  &#60; </button>
+      <button className='bg-white text-black text-[1.2rem]  rounded-full h-8 w-8' onClick={handleNextImage}> &#62;</button>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,27 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+:root{
+--Orange:hsl(26, 100%, 55%);
+--Pale_Orange:hsl(25, 100%, 94%);
+--Very_Dark_Blue:hsl(220, 13%, 13%);
+--Dark_Grayish_Blue:hsl(219, 9%, 45%);
+ --Grayish_Blue:hsl(220, 14%, 75%);
+--Light_Grayish_Blue:hsl(223, 64%, 98%);
+--White:hsl(0, 0%, 100%);
+--Black:hsl(0, 0%, 0%);
+
+
+}
 
 
 .overlay {
